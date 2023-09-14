@@ -1,0 +1,15 @@
+#heading
+{
+    font-style:normal;
+    color: tomato;
+}
+#parent
+{
+    font-style:normal;
+    color: green;
+}
+#child
+{
+    font-style:normal;
+    color: pink;
+}
