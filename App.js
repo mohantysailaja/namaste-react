@@ -1,66 +1,97 @@
 import React from "react";
-import ReactDOM  from "React-dom/client";
+import ReactDOM  from "react-dom/client";
 
-
-//React elemennt
-const elem = <span>My Span elemenet !!</span>;
-//React Element 
-
-const jsxheading = (<h1  className="heading" tabIndex="1">
-   Namaste React using jsx ☘️</h1>);
-console.log(jsxheading);
-//React elemenet inside an elemenet
-/*const title = 
- (<h1  className="heading" tabIndex="1">
-
-   Namaste React using JSX  ☘️
-  
-   </h1>
- 
- );
+/**
+ * Header
+ * - Logo
+ * - Nav Items
+ * Restaurant container
+ * Restaurant Card
+ *  - Image
+ *  - Nmae of the restaurant, start ratings , cuisine ,delivery time etc.
+ * Footer
+ * - Copyright
+ * - Links
+ * - Address
+ * - Contact
  */
-//console.log(jsxheading);
+//Header Componenet
+const Header = () =>
+    (
+      <div className="header">
+         <div className="logo-container">     
+            <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQQ9W98Mg2_uVUCWTJY_WkT0adfjOEXCvHRQ&usqp=CAU"></img>
+         </div>
+         <div className="nav-items">
+           <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Carts</li>
+           </ul>
+         </div>
+      </div>
+   );
 
-//Titel Functional component , the </Title after where you wanna put
-const Title = () =>
- (<h1  className="heading" tabIndex="1">
-   Namaste React using JSX  ☘️</h1>);
-console.log(jsxheading);
+   //Style Card
+   const styleCard = {
+       //backgroundColor:"#f0f0f0"
+   };
+   //Restaurant Card
+   const RestaurantCard = () =>
+   (
+      <div className="rest-card" style={{backgroundColor:"#f0f0f0"}}>
+         <img className="res-logo" alt="res-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/iivuhjc2mswi9lublktf"></img>
+        <h3>Meghana Foods</h3>
+        <h4>Biriyani, North Indian, Asian, chinese</h4>
+        <h4>4.4 Stars</h4>
+        <h4>38 mins</h4>
+      </div>
+   )
+//body
+const Body = () =>
+(
+  <div className="body">
+    <div className="search">Search</div> 
+      <div className="rest-container">
+         <RestaurantCard/>
+         <RestaurantCard/>
+         <RestaurantCard/>
+         <RestaurantCard/>
+         <RestaurantCard/>
+         <RestaurantCard/>
+         <RestaurantCard/>
+         <RestaurantCard/>
+         <RestaurantCard/>
+         <RestaurantCard/>
+         <RestaurantCard/>
+         <RestaurantCard/>
+         <RestaurantCard/>
+      </div>     
+  </div>
+);
 
-/*const fn1 =()=>{
-   return true;
-};
-*/
-//same as 
-/*const fn2 =()=> true;*/
 
+const AppLayout = () =>
+ 
+   (
+      <div className="app">
+         <Header />
+         <Body/>
+      </div>
+   );
 
-//React Functional Component
-
-/*
-//this is good syntax with return 
-const HeadingComponent = () =>{
-   return <h1 className="heading">Namaste Recat Functional Component</h1>
-};
-*/
-//same as 
-//Component Composition(one component withing another)
-//<Title />
-//<Title></Title> are both ways and we can write multiple times
-//we can call javascript  function {Title()} like this as Title is a function at the end of the day !
 const x = 1200;
-const HeadingComponent = () =>  (
+
+const HeadingComponent = () => 
+
+(
 <div id="container">
-  <Title></Title>
-  <Title />      
-   {Title()}   
-     <h1 className="heading">Namaste React Functional component 🦋</h1>
+   <h2>{x}</h2>
 </div>
 );
- 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-//root.render(jxheading);
-//rendering functional component
-root.render(<HeadingComponent />);
+root.render(<AppLayout />);
+
 

@@ -13,3 +13,43 @@
     font-style:normal;
     color: pink;
 }
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logo{
+    width: 200px;
+}
+.nav-items > ul {
+    display: flex;
+    font-size: 24px;
+    padding: 0px 20px;
+    list-style-type: none;
+}
+.nav-items >ul > li{
+    padding:10px;
+    margin:10px;
+}
+.rest-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.rest-card { 
+    padding: 6px;
+    width:200px;
+    height: 310px;
+    border: 1px solid black;
+    margin:6px;
+}
+.rest-card:hover{
+    cursor: pointer;
+    border: 1px solid red;
+}
+.search{
+    padding: 10px  ;
+}
+.res-logo{  
+    width: 100%;
+}
