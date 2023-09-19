@@ -21,7 +21,7 @@
 }
 .logo{
     width: 200px;
-}
+} 
 .nav-items > ul {
     display: flex;
     font-size: 24px;
@@ -38,9 +38,10 @@
 }
 .rest-card { 
     padding: 6px;
-    width:200px;
-    height: 310px;
+    width:250px;
+    height: 400px;
     border: 1px solid black;
+    border-radius: 20px;
     margin:6px;
 }
 .rest-card:hover{
@@ -52,4 +53,5 @@
 }
 .res-logo{  
     width: 100%;
+    border-radius: 15px;
 }
