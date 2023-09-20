@@ -39,7 +39,7 @@
 .rest-card { 
     padding: 6px;
     width:290px;
-    height: 600px;
+    height: 500px;
     border: 1px solid black;
     border-radius: 20px;
     margin:6px;
@@ -54,4 +54,5 @@
 .res-logo{  
     width: 100%;
     border-radius: 15px;
+    height: 250px;
 }
