@@ -24,6 +24,34 @@
 -  "main": "App.js", removed from app.json file 
 - browserslist.dev
 
+
+#Namaste Food 
+/**
+/**
+ * Header
+ * - Logo
+ * - Nav Items
+ * Restaurant container
+ * Restaurant Card
+ *  - Image
+ *  - Nmae of the restaurant, start ratings , cuisine ,delivery time etc.
+ * Footer
+ * - Copyright
+ * - Links
+ * - Address
+ * - Contact
+ */
+ //
+ Two types of Export/Import
+ - Default Export/Import
+ export default component (variable)
+ import component from "path";
+
+ -nmaed Export/Import
+  export const component;
+  import {Component} from "path";
+--when we use multiple things use named export
+
 /*
 import React from 'react';
 import ReactDOM  from 'react-dom/client';
@@ -33,6 +61,17 @@ import ReactDOM  from 'react-dom/client';
 /*const heading = document.createElement("h1");
 heading.innerHTML ="Hello world from javascript !";
 */
+
+#React Hooks
+//UTILITY FUNCTION IN TO OUR CODE
+(Normal JS utility fucntions)
+- Two very important hooks 
+- UseState() - Superpowerful state variable
+- Useeffect() - 
+
+********
+
+
 /*<!--REACT CODE STARTS--> */
 /*nested element using React
 <div id="parent">
