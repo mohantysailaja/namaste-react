@@ -52,6 +52,19 @@
   import {Component} from "path";
 --when we use multiple things use named export
 
+/*React Hooks
+(Normal JAVASCRIPT uTILITY FUNCTIONS)
+two hooks:
+
+- useState() -  supoerpowerful state variable in React- state variable-maintain the state of your component
+- const [listOfRestaurant] =useState([{inside this}]);
+- let listOfRestaurant =[]; -normal varible
+- useEffect()
+- we have to import this from react
+- we have to import as a named import 
+- import {useState} from path
+
+
 /*
 import React from 'react';
 import ReactDOM  from 'react-dom/client';

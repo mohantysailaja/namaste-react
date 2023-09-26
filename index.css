@@ -56,3 +56,13 @@
     border-radius: 15px;
     height: 250px;
 }
+.filter-btn{
+    margin: 10px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    color: white;
+    background-color: orange;
+    font-weight: bold;
+}

@@ -1,7 +1,7 @@
 
 
 //Named exports are imported with a {} froma specific file below,if default export no need of {}
-import { CDN_URL } from "../../utils/constants";
+import { CDN_URL } from "../utils/constants";
 //Style Card
 
 //If we wish to add style we can declare variable and pass within {} like below 
