@@ -1,17 +1,24 @@
 import RestaurantCard  from "./RestaurantCard";
 import resList from "../utils/mockData";
-import { useState } from "react"; 
+import { useState, useEffect } from "react"; 
 //passing restaurant data in form of json file 
 //body
 //not using keys (not accetable) <<<< index as key <<<<<< unique id (best practice)
 const Body = () =>{
 //State Variable  - Super Powerful Variable
 const [listOfRestaurants, setlistOfRestaurants]=useState(resList);
+
+useEffect(() => {
+  console.log("use effect");
+}, []);//two arguments  1st arrow function,dependecy array should be called once you render the page
 //Array destructuring
 //const arr = useState(resList);
 //const listofRestaurant = arr[0];
 //const setlistofRestaurants = arr[1];
-//
+//Local State Variable - Super pOwerful variable
+//const[listOfRestaurants] = useState([]);
+//Normal Javacsript Variable
+//let listOfRestaurants = [];
 return (
   <div className="body">
     <div className="search">Search</div> 

@@ -53,7 +53,7 @@
 --when we use multiple things use named export
 
 /*React Hooks
-(Normal JAVASCRIPT uTILITY FUNCTIONS)
+(Normal JAVASCRIPT UTILITY FUNCTIONS)
 two hooks:
 
 - useState() -  supoerpowerful state variable in React- state variable-maintain the state of your component
