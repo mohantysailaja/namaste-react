@@ -1,12 +1,13 @@
 import RestaurantCard  from "./RestaurantCard";
 import resList from "../utils/mockData";
-import { useState, useEffect } from "react"; 
+import { useState } from "react"; 
+import { useEffect } from "react"; 
 //passing restaurant data in form of json file 
 //body
 //not using keys (not accetable) <<<< index as key <<<<<< unique id (best practice)
 const Body = () =>{
 //State Variable  - Super Powerful Variable
-const [listOfRestaurants, setlistOfRestaurants]=useState(resList);
+const [listOfRestaurants, setListOfRestaurants]=useState(resList);
 
 useEffect(() => {
   console.log("use effect");
@@ -26,17 +27,20 @@ return (
       <button className="filter-btn"
       onClick={() => {
         const filteredList = listOfRestaurants.filter(
-          (res) => res.info.avgRating >4);
+          (res) => res.info.avgRating > 5
+          );
         //console.log(resList);
-        setlistOfRestaurants(filteredList);
-      }}>
-      
+        setListOfRestaurants(filteredList);
+        console.log(filteredList);
+      }}
+      > 
+
         Top Rated Restaurant</button>
     </div>
       <div className="rest-container">
-        <RestaurantCard resData={resList[0]}/> 
+      
        {
-         resList.map((restaurant => <RestaurantCard key={restaurant.info.id} resData={restaurant}/>)
+         listOfRestaurants.map((restaurant => <RestaurantCard key={restaurant.info.id} resData={restaurant}/>)
          )}   
       </div>     
   </div>
