@@ -92,3 +92,12 @@
     display: flex;
     flex-wrap: wrap;
 }
+.search_box{ 
+    width: 180px;
+    background-color: blanchedalmond;
+}
+.input_search_button{
+    color: red;
+    padding: 2px;
+    width: 100px;
+}
