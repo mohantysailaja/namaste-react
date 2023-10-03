@@ -13,8 +13,10 @@ const Header = () => {
               <li><a href="#">Home</a></li>        
               <li><a href="#">About Us</a></li>
               <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Carts</a></li>
+              <li><a href="#">Carts</a></li>    
+              <button className="login-button">Login</button>     
              </ul>
+             
            </div>
         </div>
      );

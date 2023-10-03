@@ -66,3 +66,20 @@
     background-color: orange;
     font-weight: bold;
 }
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmer-card{
+    padding: 6px;
+    width:290px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin:20px;
+    background-color: #f0f0f0;
+}
+.login-button{
+    padding:0 20px;
+    cursor: pointer;
+}
