@@ -1,12 +1,8 @@
 import React from "react";
 import ReactDOM  from "react-dom/client";
 import Header from "./components/Header";
-import Body from  "./components/Body";
-import { createBrowserRouter ,RouterProvider} from "react-router-dom";
-import About from "./components/About";
-
 /*import {Header} from "./components/Header";if the export is named export type*/
-//import Body from "./components/Body";
+import Body from "./components/Body";
 
 
    
@@ -101,32 +97,18 @@ import About from "./components/About";
 
 
 //Body Layout starts here
-const AppLayout = () =>{
-   return (
+const AppLayout = () =>
+   (
       <div className="app">
          <Header />
          <Body/>
       </div>
    );
-};
-//Router code
-const appRouter = createBrowserRouter([
-{
- path:"/",
- element:<AppLayout />,
-},
-{
-   path:"/about",
-   element:<About />,
-}
 
-]);
+const x = 1200;
 
-
-   
-
-//const x = 1200;
 const HeadingComponent = () => 
+
 (
 <div id="container">
    <h2>{x}</h2>
@@ -134,8 +116,6 @@ const HeadingComponent = () =>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-//root.render(<AppLayout />);
-//RouterProvider is a component ,which provide this routing configuration to our app
-root.render(<RouterProvider router={appRouter}/>);
+root.render(<AppLayout />);
 
 
