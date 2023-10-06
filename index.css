@@ -35,6 +35,8 @@
 .rest-container{
     display: flex;
     flex-wrap: wrap;
+    width:1400px;
+    padding:40px 65px 10px 126px;
 }
 .rest-card { 
     padding: 6px;

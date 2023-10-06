@@ -1,6 +1,7 @@
 //As it is a named import we can use inside {} as it is a js const variable inside {}
 import { LOGO_URL } from "../utils/constants";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 //Header Componenet
 const Header = () => {
 //login button
@@ -22,10 +23,18 @@ useEffect(()=>{
            </div>
            <div className="nav-items">
              <ul>
-              <li><a href="#">Home</a></li>        
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Carts</a></li>    
+              <li>
+                <Link to="/">Home</Link>
+                </li>        
+              <li>
+                <Link to="/About">About Us</Link>
+                </li>
+              <li>
+                <Link to="/Contact">Contact Us</Link>
+                </li>
+              <li>
+                <Link to="/Cart">Carts</Link>
+                </li>    
               <button className="login-button" 
               onClick={()=>{
              btnNameReact === "Login"

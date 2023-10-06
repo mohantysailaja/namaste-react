@@ -84,6 +84,10 @@ heading.innerHTML ="Hello world from javascript !";
 
 ********
 
+# 2 types of Routing in web apps
+- client Side Routing(no network calls required)
+- Server Side Routing
+- Single page application
 
 /*<!--REACT CODE STARTS--> */
 /*nested element using React
