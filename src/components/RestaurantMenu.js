@@ -18,16 +18,12 @@ const fetchMenu = async () =>{
     console.log(json);
     setResMenuInfo(json.data);
 };
-//const Menu = (props) =>{
-   // const {resMenuInfo} = props;
-   // const {name, cuisines, costForTwoMessage} = resMenuInfo?.cards[0]?.card?.card?.info;
-  //  console.log(resMenuInfo);
-//}
+if(resMenuInfo === null) return <Shimmer />;
+
     const { name } =
     resMenuInfo?.cards[0]?.card?.card?.info;
 
-    return resMenuInfo === null ? 
-    (<Shimmer />) : (
+    return  (
         <div className="menu">
             <h1>{name}</h1>
             <h3></h3>
