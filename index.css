@@ -103,3 +103,8 @@
     padding: 2px;
     width: 100px;
 }
+.location-btn{
+    color: orange;
+    border: none;
+    background-color: white;
+}
