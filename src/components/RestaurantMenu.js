@@ -1,9 +1,15 @@
 import {useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { useParams } from "react-router-dom";
+import { MENU_API } from "../utils/constants";
 
 const RestaurantMenu =() =>{
     
   const [resMenuInfo, setResMenuInfo] = useState(null);
+
+  //const params = useParams();
+  //console.log(params);
+   const {resId} = useParams();
 
 
 useEffect(() => {
@@ -11,8 +17,7 @@ fetchMenu();
 },[]);
 
 const fetchMenu = async () =>{
-    const data = await fetch(
-    "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=600456&catalog_qa=undefined&query=Roll&submitAction=ENTER");
+    const data = await fetch(MENU_API + resId );  
     const json = await data.json();
 
     console.log(json);
@@ -22,9 +27,10 @@ if(resMenuInfo === null) return <Shimmer />;
 
     const { name, cuisines, costForTwoMessage, areaName } =
     resMenuInfo?.cards[0]?.card?.card?.info;
+    //resMenuInfo?.card[2]?.card?.card?.gridelement?.infoWithStyle?.restaurant[0]?.info;
 
     const{itemCards} =
-    resMenuInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+    resMenuInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card;
     console.log(itemCards);
      
     const{lastMileTravelString}=
@@ -33,7 +39,7 @@ if(resMenuInfo === null) return <Shimmer />;
     return  (
         <div className="menu">
             <h1>{name}</h1>
-            <p>{cuisines.join(", ")} - ₹{costForTwoMessage}
+            <p>{cuisines.join(", ")} - {costForTwoMessage}
             </p>
             <p>{areaName}{" ,"} {lastMileTravelString}
             <button className="location-btn">

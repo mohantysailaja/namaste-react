@@ -57,6 +57,7 @@
     width:280px;
     border-radius: 15px;
     height: 250px;
+    padding:2px 5px;
 }
 .filter-btn{
     margin: 10px;
@@ -107,4 +108,8 @@
     color: orange;
     border: none;
     background-color: white;
+    cursor: pointer;
+}
+.menu{
+
 }
