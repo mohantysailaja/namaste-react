@@ -113,3 +113,14 @@
 .menu{
 
 }
+.user-card{
+    color:chocolate;
+    padding:30px;
+    border:4px solid green;
+    width:600px;
+    margin:10px;
+    border-radius: 30px 20px 40px 30px;
+    font-family:cursive;
+    font-weight:bolder;
+    font-size: larger;
+}

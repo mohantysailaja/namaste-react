@@ -89,6 +89,11 @@ heading.innerHTML ="Hello world from javascript !";
 - Server Side Routing
 - Single page application
 
+
+/**
+#
+- loading a class based componenet means you are creating an instance of a class
+- 
 /*<!--REACT CODE STARTS--> */
 /*nested element using React
 <div id="parent">
