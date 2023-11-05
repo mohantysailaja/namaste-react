@@ -30,6 +30,7 @@ return (
      <h4>{avgRating}</h4>
      <h4>{resData.info.sla.deliveryTime} minutes</h4>     
      <h4>{cuisines.join(", ")} </h4>   
+     <button>Click me to know the Menu</button>
    </div>
 );
 };

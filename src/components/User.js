@@ -13,6 +13,7 @@ const User = ({ name })=>{
           <h3>Location: Athlone, Ireland</h3>
           <h3>Contact:+353 0899441307</h3>
           <h3>Hobbies:Guitar,basket ball,soccer,drawing,reading</h3>
+          <h3>Interests:Apple products like  📱 👨‍💻, </h3>
           <h3>Email:bal.aarush@gmail.com</h3>
         </div>
     )

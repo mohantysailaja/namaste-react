@@ -3,6 +3,8 @@
   import { useState ,useEffect} from "react"; 
   import Shimmer from "./Shimmer";
   import { Link } from "react-router-dom";
+  import { IMAGE_EXTERNAL } from "../utils/constants";
+  import { IMG_VEG } from "../utils/constants";
 
   const Body = () =>{
 
@@ -37,10 +39,16 @@
       <div className="search">Search</div> 
       <div className="filter-button">    
       <div>
+        <span>To show star ratings</span>
+        <span className="fas fa-star green-star"></span>
+        <img className="veg-logo" src={IMG_VEG}></img>
+      </div>
+      <div>
         <input type="text" className="search_box"
         value={searchText}
         onChange={(e)=>{setSearchText(e.target.value);}}
-        />
+        /> 
+        
         <button className="input_search_button"
         onClick={()=>{
         //Filter the restaurants cards and update the UI
@@ -50,7 +58,8 @@
             (res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()));
             setFilteredRestaurant(filteredRestaurant);
         }}
-        >Search</button>
+        >Search<span className="icon-magnifier">&#128269;</span></button>
+       
       </div>
         <button className="filter-btn"
         onClick={() => {

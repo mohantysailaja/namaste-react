@@ -41,7 +41,7 @@
 .rest-card { 
     padding: 6px;
     width:290px;
-    height: 500px;
+    height: 530px;
     border: 1px solid black;
     border-radius: 20px;
     margin:6px;
@@ -103,7 +103,13 @@
     color: red;
     padding: 2px;
     width: 100px;
+    cursor: pointer;
+    border-radius: 10px;
 }
+.input_search_button:hover{
+    background-color: yellowgreen;
+}
+
 .location-btn{
     color: orange;
     border: none;
@@ -114,13 +120,28 @@
 
 }
 .user-card{
-    color:chocolate;
+    color:rgb(210, 30, 30);
     padding:30px;
     border:4px solid green;
     width:600px;
     margin:10px;
     border-radius: 30px 20px 40px 30px;
-    font-family:cursive;
+    font-family:'Times New Roman', Times, serif;
     font-weight:bolder;
     font-size: larger;
 }
+.icon-magnifier{
+    cursor: pointer;
+    margin-left: 5px;
+}
+.green-star {
+    color:green; /* Set the color to green */
+    font-size: 15px; /* Adjust the size as needed */
+    /* Add more styles as desired */
+  }
+  .veg-logo{
+    width:20px;
+    height: 20px;
+    border: 10px;
+    margin: 20px;
+  }
