@@ -1,4 +1,4 @@
-import React from "react";
+import React , { lazy, Suspense} from "react";
 import ReactDOM  from "react-dom/client";
 import Header from "./components/Header";
 import Body from  "./components/Body";
@@ -7,6 +7,17 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
+//import Grocery from "./components/Grocery";
+
+
+//Chunking
+//Code Scripting
+//Dynamic Bundling
+//lazy Loading
+//On Demand Loading
+//Dynamic Import
+
+const Grocery = lazy(() => import("./components/Grocery"));
 
 /*import {Header} from "./components/Header";if the export is named export type*/
 //import Body from "./components/Body";
@@ -130,6 +141,10 @@ const appRouter = createBrowserRouter([
     path:"/contact",
     element:<Contact />,
    },
+   {
+      path:"/grocery",
+      element: <Suspense fallback={<h1>Loading....</h1>}><Grocery /></Suspense>,
+     },
    {
       path:"/restaurants/:resId",
       element:<RestaurantMenu />,

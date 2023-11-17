@@ -2,6 +2,7 @@
 import { LOGO_URL } from "../utils/constants";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 //Header Componenet
 const Header = () => {
 //login button
@@ -15,6 +16,9 @@ useEffect(()=>{
   console.log("UseEffect called")
 },[btnNameReact]);
 
+//online status
+const onlineStatus = useOnlineStatus();
+
     return  (
         <div className="header">
            <div className="logo-container">     
@@ -23,6 +27,9 @@ useEffect(()=>{
            </div>
            <div className="nav-items">
              <ul>
+              <li> 
+                Aarush's online status : {onlineStatus ?"🛜" : "🔴" }
+              </li>
               <li>
                 <Link to="/">Home</Link>
                 </li>        
@@ -31,6 +38,9 @@ useEffect(()=>{
                 </li>
               <li>
                 <Link to="/Contact">Contact Us</Link>
+                </li>
+                <li>
+                <Link to="/grocery">Grocery</Link>
                 </li>
               <li>
                 <Link to="/Cart">Carts</Link>
