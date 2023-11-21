@@ -20,13 +20,13 @@ useEffect(()=>{
 const onlineStatus = useOnlineStatus();
 
     return  (
-        <div className="header">
+        <div className="flex">
            <div className="logo-container">     
-              <img className="logo"
+              <img className="w-56"
                src={LOGO_URL}></img>
            </div>
            <div className="nav-items">
-             <ul>
+             <ul className="flex">
               <li> 
                 Aarush's online status : {onlineStatus ?"🛜" : "🔴" }
               </li>
