@@ -20,12 +20,12 @@ const {cloudinaryImageId,
 
 console.log(props);
 return (
-   <div className="rest-card" style={{backgroundColor:"#f0f0f0"}}>
+   <div className="rest-card m-4 p-4 w-[250px] bg-gray-100 hover:bg-gray-200 rounded-lg">
       <img 
-      className="res-logo"
+      className="res-logo w-[300px] h-[150px] rounded-lg"
        alt="res-logo"
        src={CDN_URL + cloudinaryImageId}/>
-     <h3>{name}</h3>
+     <h3 className="font-bold py-4 text-lg">{name}</h3>
      <h4>{costForTwo}</h4>
      <h4>{avgRating}</h4>
      <h4>{resData.info.sla.deliveryTime} minutes</h4>     
@@ -34,5 +34,16 @@ return (
    </div>
 );
 };
+
+//Higher Order component
+ export const withIsOpenLabel = (RestaurantCard) =>{
+   return (props) => {
+     <div>
+      <label>IsOpen</label>
+      <RestaurantCard {...props} />
+     </div> 
+   }
+ }
+//input - RestaurantCard => RestaurantCardPromoted
 
 export default RestaurantCard;

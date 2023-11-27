@@ -20,29 +20,29 @@ useEffect(()=>{
 const onlineStatus = useOnlineStatus();
 
     return  (
-        <div className="flex">
+        <div className="flex justify-between bg-orange-100 shadow-lg">
            <div className="logo-container">     
               <img className="w-56"
                src={LOGO_URL}></img>
            </div>
-           <div className="nav-items">
-             <ul className="flex">
-              <li> 
+           <div className="flex items-center">
+             <ul className="flex  p-4 m-4">
+              <li className="px-4"> 
                 Aarush's online status : {onlineStatus ?"🛜" : "🔴" }
               </li>
-              <li>
+              <li className="px-4">
                 <Link to="/">Home</Link>
                 </li>        
-              <li>
+              <li className="px-4">
                 <Link to="/About">About Us</Link>
                 </li>
-              <li>
+              <li className="px-4">
                 <Link to="/Contact">Contact Us</Link>
                 </li>
-                <li>
+                <li className="px-4"> 
                 <Link to="/grocery">Grocery</Link>
                 </li>
-              <li>
+              <li className="px-4">
                 <Link to="/Cart">Carts</Link>
                 </li>    
               <button className="login-button" 
