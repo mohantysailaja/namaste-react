@@ -37,7 +37,13 @@ if(resMenuInfo === null) return <Shimmer />;
     const{itemCards} =
     resMenuInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card;
     console.log(itemCards);
-     
+  //  console.log(resMenuInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+  const categories = 
+   resMenuInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    (c) =>
+      c.card?.["card"]?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+   );
+    console.log(categories);
     const{lastMileTravelString}=
     resMenuInfo?.cards[0]?.card?.card?.info?.sla;
     

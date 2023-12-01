@@ -24,10 +24,12 @@
   const fetchData = async  ()=>{
   const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+     // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
   
   );
   const json = await data.json();
   console.log(json);
+  console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
   setListOfRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   setFilteredRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -97,7 +99,7 @@ return(
             to={"/restaurants/" + restaurant.info.id}>
 
               {/** higher Order component - if the restaurant is open  then add a isopen label to it -enhancement*/}
-             {restaurant.data.isopen ? (
+             {restaurant.info.isOpen ? (
              
             <RestaurantCardIsOpen key={restaurant.info.id} resData={restaurant}/>
              ) : (
