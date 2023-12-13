@@ -2,6 +2,7 @@
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import RestaurantCategory from "./RestaurantCategory";
 //import { MENU_API } from "../utils/constants";
 
 const RestaurantMenu =() =>{
@@ -41,15 +42,35 @@ if(resMenuInfo === null) return <Shimmer />;
   const categories = 
    resMenuInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
     (c) =>
-      c.card?.["card"]?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+      c.card?.["card"]?.["@type"] === 
+      "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
    );
-    console.log(categories);
+   // console.log(categories);
     const{lastMileTravelString}=
     resMenuInfo?.cards[0]?.card?.card?.info?.sla;
     
     return  (
-        <div className="menu">
-            <h1>{name}</h1>
+        <div className="text-center">   
+          <h1 className="font-bold text-2xl my-6">{name}</h1>    
+            <p className="font-bold text-lg">
+              {cuisines.join(", ")} - {costForTwoMessage}
+              
+            </p>    
+          
+            {/* categories accordions */}  
+            {categories.map((category) => (
+            <RestaurantCategory 
+            key={category?.card?.card.title} 
+            data={category?.card?.card} />
+            ))}
+
+        </div>
+    );
+};
+export default RestaurantMenu;
+//resuability
+/**
+ *   <h1>{name}</h1>
             <p>{cuisines.join(", ")} - {costForTwoMessage}
             </p>
             <p>{areaName}{" ,"} {lastMileTravelString}
@@ -64,8 +85,4 @@ if(resMenuInfo === null) return <Shimmer />;
                 ))}
                <li>Manual not dynamic</li>
             </ul>
-        </div>
-    );
-};
-export default RestaurantMenu;
-//resuability
+ */
