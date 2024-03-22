@@ -61,7 +61,10 @@ if(resMenuInfo === null) return <Shimmer />;
             {categories.map((category) => (
             <RestaurantCategory 
             key={category?.card?.card.title} 
-            data={category?.card?.card} />
+            data={category?.card?.card}
+            
+            
+            />
             ))}
 
         </div>
